@@ -1,7 +1,5 @@
 package com.base.engine;
 
-import org.lwjgl.system.windows.WINDOWPLACEMENT;
-
 /**
  * Created by Guard on 11/10/2017.
  */
@@ -10,7 +8,7 @@ public class MainComponent {
     public static final int HEIGHT = 600;
     public static final String TITLE = "Coffee Engine";
     public static final boolean vsyncEnabled = true;
-    public static final double FRAME_CAP = 5000.0;
+    public static final double FRAME_CAP = 200.0;
 
     private boolean isRunning;
     private Game game;
@@ -24,6 +22,7 @@ public class MainComponent {
         if(isRunning)
             return;
 
+        isRunning = true;
         run();
     }
 
@@ -35,50 +34,51 @@ public class MainComponent {
     }
 
     private void run(){
-        isRunning = true;
-
-        int frames = 0;
+        int frames = 0; // Framerate
         long framesCounter = 0;
 
-        final double frameTime = 1.0 / FRAME_CAP;
+        final double frameLength = 1.0 / FRAME_CAP;
 
-        long lastTime = Time.getTime();
-        double unprocessedTime = 0;
+        long lastTime = Time.getTime(); // Time of previous frame
+        double unprocessedTime = 0;     // How many times to still update game
+        boolean render = false;
 
         while(isRunning){
 
-            boolean render = false;
 
-            long startTime = Time.getTime();
-            long passedTime = startTime - lastTime;
+            long startTime = Time.getTime();    // Time of this frame
+            long passedTime = startTime - lastTime; // Time it took last frame to this frame
             lastTime = startTime;
 
             unprocessedTime += passedTime / (double)Time.SECOND;
+            //System.out.println(unprocessedTime);
             framesCounter += passedTime;
-            while (unprocessedTime > frameTime){
+
+            while (unprocessedTime > frameLength){
                 render = true;
 
-                unprocessedTime -= frameTime;
+                unprocessedTime -= frameLength;
 
                 if(Window.isCloseRequested())
                     stop();
 
-                Time.setDelta(frameTime);
+                Time.setDelta(frameLength);
 
                 Input.update();
 
                 game.input();
                 game.update();
-
                 if(framesCounter >= Time.SECOND){
-                    //System.out.println(frames);
+                    System.out.println(frames);
                     frames=0;
                     framesCounter = 0;
                 }
             }
             if(render){
-                render();
+                System.out.println("render");
                 frames++;
+                render();
+                render = false;
             }
             else {
                 try {
@@ -98,7 +98,7 @@ public class MainComponent {
         Window.render();
     }
 
-    public void cleanUp(){
+    private void cleanUp(){
         Window.destroy();
     }
 

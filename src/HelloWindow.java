@@ -1,4 +1,4 @@
-import org.lwjgl.*;
+/*import org.lwjgl.*;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
@@ -112,3 +112,4 @@ public class HelloWindow {
         new HelloWindow().run();
     }
 }
+*/

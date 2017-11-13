@@ -140,7 +140,6 @@ public class Window {
 
     public static void destroy() {
         glfwDestroyWindow(windowid);
-        keyCallback.free();
         glfwTerminate();
     }
 

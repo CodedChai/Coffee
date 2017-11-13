@@ -4,6 +4,7 @@ package com.base.engine;
  * Created by Guard on 11/10/2017.
  */
 public class Time {
+
     public static final long SECOND = 1000000000L;
 
     private static double delta;

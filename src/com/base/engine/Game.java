@@ -12,7 +12,7 @@ public class Game {
     }
 
     public void input(){
-        if(Input.getKey(((int)GLFW_KEY_E))){
+        if(Input.getKey((GLFW_KEY_E))){
             System.out.println("Just pressed E");
         }
        /* if(Input.getKeyUp(((int)GLFW_KEY_E))){
