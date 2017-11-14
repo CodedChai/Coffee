@@ -19,7 +19,8 @@ public class Window {
      * Stores the window handle.
      */
     public static long windowid;
-
+    public static int w;
+    public static int h;
     /**
      * Key callback for the window.
      */
@@ -32,7 +33,8 @@ public class Window {
 
     public static void createWindow(int width, int height, String title, boolean vsyncEnabled){
         vsync = vsyncEnabled;
-
+        w = width;
+        h = height;
 
 
 
@@ -58,10 +60,8 @@ public class Window {
             throw new RuntimeException("Failed to create the GLFW window");
 
         // Setup a key callback. It will be called every time a key is pressed, repeated or released.
-        glfwSetKeyCallback(windowid, (window, key, scancode, action, mods) -> {
-            if ( key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE )
-                glfwSetWindowShouldClose(window, true); // We will detect this in the rendering loop
-        });
+        glfwSetKeyCallback(Window.windowid, keyCallback = new Input());
+
 
         // Get the thread stack and push a new frame
         try ( MemoryStack stack = stackPush() ) {
@@ -87,6 +87,8 @@ public class Window {
         /* Enable v-sync */
         if (vsync) {
             glfwSwapInterval(1);
+        } else {
+            glfwSwapInterval(0);
         }
 
         // Make the window visible
@@ -104,9 +106,11 @@ public class Window {
         // Set the clear color
         glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
 
+
+
         // Run the rendering loop until the user has attempted to close
         // the window or has pressed the ESCAPE key.
-        while ( !glfwWindowShouldClose(windowid) ) {
+        if ( !glfwWindowShouldClose(windowid) ) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
 
             glfwSwapBuffers(windowid); // swap the color buffers
@@ -141,6 +145,14 @@ public class Window {
     public static void destroy() {
         glfwDestroyWindow(windowid);
         glfwTerminate();
+    }
+
+    public static int getHeight(){
+        return h;
+    }
+
+    public static int getWidth(){
+        return w;
     }
 
 }

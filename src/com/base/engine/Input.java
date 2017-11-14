@@ -1,28 +1,14 @@
 package com.base.engine;
 
-import java.util.ArrayList;
-
+import org.lwjgl.glfw.GLFWKeyCallback;
 import static org.lwjgl.glfw.GLFW.*;
 
-public class Input {
+public class Input extends GLFWKeyCallback {
 
-    public static void update(){
+    public static int[] keys = new int[65535];
+
+    @Override
+    public void invoke(long window, int key, int scancode, int action, int mods) {
+        keys[key] = action;
     }
-
-    public static boolean getKey(int keyCode){
-        int state = glfwGetKey(Window.windowid, keyCode);
-        return (state == GLFW_PRESS || state == GLFW_REPEAT);
-    }
-
-    public static boolean getKeyDown(int keyCode){
-        int state = glfwGetKey(Window.windowid, keyCode);
-        return (state == GLFW_PRESS);
-    }
-
-    public static boolean getKeyUp(int keyCode){
-        // TODO: Check only when key is released
-        int state = glfwGetKey(Window.windowid, keyCode);
-        return (state == GLFW_RELEASE);
-    }
-
 }
