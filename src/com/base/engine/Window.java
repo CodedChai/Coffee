@@ -7,6 +7,7 @@ import org.lwjgl.system.*;
 import java.nio.*;
 
 import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
@@ -33,11 +34,6 @@ public class Window {
         vsync = vsyncEnabled;
         w = width;
         h = height;
-
-
-
-
-
 
         // Setup an error callback. The default implementation
         // will print the error message in System.err.
@@ -109,7 +105,11 @@ public class Window {
         // the window or has pressed the ESCAPE key.
         if ( !glfwWindowShouldClose(windowid) ) {
             RenderUtil.clearScreen();
+        }
+    }
 
+    public static void lateRender(){
+        if ( !glfwWindowShouldClose(windowid) ) {
             glfwSwapBuffers(windowid); // swap the color buffers
 
             // Poll for window events. The key callback above will only be

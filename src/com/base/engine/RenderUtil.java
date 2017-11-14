@@ -7,7 +7,7 @@ public class RenderUtil {
 
     public static void clearScreen(){
         // TODO: Stencil Buffer
-        glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     }
 
     public static void initGraphics(){
@@ -22,6 +22,10 @@ public class RenderUtil {
 
         // For proper color reproduction
         glEnable(GL_FRAMEBUFFER_SRGB);
+    }
+
+    public static String getOpenGLVersion(){
+        return glGetString(GL_VERSION);
     }
 
 }

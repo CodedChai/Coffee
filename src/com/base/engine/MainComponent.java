@@ -8,13 +8,13 @@ public class MainComponent {
     public static final int HEIGHT = 600;
     public static final String TITLE = "Coffee Engine";
     public static final boolean vsyncEnabled = false;
-    public static final double FRAME_CAP = 500.0;
+    public static final double FRAME_CAP = 5000.0;
 
     private boolean isRunning;
     private Game game;
 
     public MainComponent(){
-        //RenderUtil.initGraphics();
+        System.out.println(RenderUtil.getOpenGLVersion());
         isRunning = false;
         game = new Game();
     }
@@ -24,7 +24,7 @@ public class MainComponent {
             return;
 
         isRunning = true;
-        game.start();
+
         run();
     }
 
@@ -44,7 +44,7 @@ public class MainComponent {
         long lastTime = Time.getTime(); // Time of previous frame
         double unprocessedTime = 0;     // How many times to still update game
         boolean render = false;
-
+        game.start();
         while(isRunning){
 
             long startTime = Time.getTime();    // Time of this frame
@@ -91,8 +91,9 @@ public class MainComponent {
     }
 
     private void render(){
-        game.render();
         Window.render();
+        game.render();
+        Window.lateRender();
     }
 
     private void cleanUp(){
@@ -101,6 +102,7 @@ public class MainComponent {
 
     public static void main(String[] args){
         Window.createWindow(WIDTH, HEIGHT, TITLE, vsyncEnabled);
+        Window.render();
 
         MainComponent mainGame = new MainComponent();
         mainGame.start();
