@@ -14,9 +14,10 @@ public class Game {
     private Transform transform;
 
     public Game(){
-        mesh = new Mesh();
+        mesh = ResourceLoader.loadMesh("cube.obj"); //new Mesh();
         shader = new Shader();
 
+        /* created pyramid
         Vertex[] vertices = new Vertex[]{
                 new Vertex(new Vector3f(-1, -1, 0)),
                 new Vertex(new Vector3f(0, 1, 0)),
@@ -28,7 +29,7 @@ public class Game {
                                     3,1,2,
                                     2,1,0,
                                     0,2,3};
-        mesh.addVertices(vertices, indices);
+        mesh.addVertices(vertices, indices);*/
 
         transform = new Transform();
 
@@ -44,8 +45,6 @@ public class Game {
 
     }
 
-
-
     public void input(){
         if(GLFW_PRESS == Input.keys[GLFW_KEY_E]){
             System.out.println("Pressed E");
@@ -56,9 +55,9 @@ public class Game {
     float temp = 0.0f;
     public void update(){
         temp += Time.getDelta();
-        transform.setTranslation((float)Math.sin(temp),(float)Math.abs(Math.cos(temp)),0);
+        transform.setTranslation((float)Math.sin(temp),(float)Math.abs(Math.cos(temp)) - 0.5f,0);
         transform.setRotation(0, (float)Math.sin(temp) * 180, (float)Math.sin(temp) * 180);
-        transform.setScale((float)Math.abs(Math.sin(temp)), (float)Math.abs(Math.sin(temp)), (float)Math.abs(Math.sin(temp)));
+        transform.setScale(0.5f * (float)Math.abs(Math.sin(temp)), 0.5f * (float)Math.abs(Math.sin(temp)), 0.5f * (float)Math.abs(Math.sin(temp)));
     }
 
     public void render(){

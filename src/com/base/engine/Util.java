@@ -4,6 +4,8 @@ import org.lwjgl.BufferUtils;
 
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class Util {
 
@@ -46,6 +48,26 @@ public class Util {
         buffer.flip();
 
         return buffer;
+    }
+
+    public static String[] removeEmptyStrings(String[] tokens){
+        ArrayList<String> tokenList = new ArrayList<>();
+
+        for (final String token : tokens){
+            if (!Objects.equals(token, "")){
+                tokenList.add(token);
+            }
+        }
+        return tokenList.toArray(new String[tokenList.size()]);
+    }
+
+    public static int[] toIntArray(Integer[] indexData) {
+        int[] result = new int[indexData.length];
+        int counter = 0;
+        for (final Integer integer : indexData){
+            result[counter++] = integer;
+        }
+        return result;
     }
 
 }
