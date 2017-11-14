@@ -12,10 +12,12 @@ public class Game {
     private Mesh mesh;
     private Shader shader;
     private Transform transform;
+    private Camera camera;
 
     public Game(){
         mesh = ResourceLoader.loadMesh("cube.obj"); //new Mesh();
         shader = new Shader();
+        camera = new Camera();
 
         /* created pyramid
         Vertex[] vertices = new Vertex[]{
@@ -31,8 +33,9 @@ public class Game {
                                     0,2,3};
         mesh.addVertices(vertices, indices);*/
 
+        Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
+        Transform.setCamera(camera);
         transform = new Transform();
-        transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000f);
 
         shader.addVertexShader(ResourceLoader.loadShader("basicVertex.vs"));
         shader.addFragmentShader(ResourceLoader.loadShader("basicFragment.fs"));

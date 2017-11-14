@@ -51,6 +51,11 @@ public class Quaternion {
         return  new Quaternion(x_, y_, z_, w_);
     }
 
+    public Quaternion Mul(float r)
+    {
+        return new Quaternion(x * r, y * r, z * r, w * r);
+    }
+
     public float getX() {
         return x;
     }
