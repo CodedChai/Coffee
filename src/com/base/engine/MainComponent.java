@@ -8,12 +8,13 @@ public class MainComponent {
     public static final int HEIGHT = 600;
     public static final String TITLE = "Coffee Engine";
     public static final boolean vsyncEnabled = false;
-    public static final double FRAME_CAP = 200.0;
+    public static final double FRAME_CAP = 500.0;
 
     private boolean isRunning;
     private Game game;
 
     public MainComponent(){
+        //RenderUtil.initGraphics();
         isRunning = false;
         game = new Game();
     }
@@ -51,7 +52,6 @@ public class MainComponent {
             lastTime = startTime;
 
             unprocessedTime += passedTime / (double)Time.SECOND;
-            //System.out.println(unprocessedTime);
             framesCounter += passedTime;
 
             while (unprocessedTime > frameLength){
