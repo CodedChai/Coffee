@@ -26,6 +26,9 @@ public class Game {
         shader.addVertexShader(ResourceLoader.loadShader("basicVertex.vs"));
         shader.addFragmentShader(ResourceLoader.loadShader("basicFragment.fs"));
         shader.compileShader();
+
+
+        shader.addUniform("fade");
     }
 
     public void start(){
@@ -40,10 +43,15 @@ public class Game {
         }
 
     }
+    float temp = 0.0f;
 
 
     public void update(){
 
+        temp += Time.getDelta();
+        shader.bind();
+        shader.setUniformf("fade", (float)Math.abs(Math.sin(temp)));
+        shader.unbind();
     }
 
     public void render(){
