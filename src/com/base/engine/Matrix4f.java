@@ -63,6 +63,19 @@ public class Matrix4f {
         return this;
     }
 
+    public Matrix4f Projection(float fov, float width, float height, float zNear, float zFar){
+        float ar = width/height;
+        float tanHalfFoV = (float)Math.tan(Math.toRadians(fov / 2));
+        float zRange = zNear - zFar;
+
+        m[0][0] = 1 / (tanHalfFoV * ar);    m[0][1] = 0;                m[0][2] = 0; m[0][3] = 0;
+        m[1][0] = 0;                        m[1][1] = 1 / tanHalfFoV;   m[1][2] = 0; m[1][3] = 0;
+        m[2][0] = 0;                        m[2][1] = 0;                m[2][2] = (-zNear - zFar)/zRange; m[2][3] = 2 * zFar * zNear / zRange;
+        m[3][0] = 0;                        m[3][1] = 0;                m[3][2] = 1; m[3][3] = 0;
+
+        return this;
+    }
+
     public Matrix4f mul(Matrix4f right){
         Matrix4f result = new Matrix4f();
 
