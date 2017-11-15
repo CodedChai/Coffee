@@ -4,8 +4,8 @@ package com.base.engine;
  * Created by Guard on 11/10/2017.
  */
 public class MainComponent {
-    public static final int WIDTH = 800;
-    public static final int HEIGHT = 600;
+    public static final int WIDTH = 1920;
+    public static final int HEIGHT = 1080;
     public static final String TITLE = "Coffee Engine";
     public static final boolean vsyncEnabled = false;
     public static final double FRAME_CAP = 5000.0;

@@ -1,6 +1,6 @@
 package com.base.engine;
 
-import org.lwjgl.glfw.GLFWKeyCallback;
+import org.lwjglx.Sys;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -12,27 +12,31 @@ public class Game {
     private Mesh mesh;
     private Shader shader;
     private Transform transform;
+    private Texture texture;
     private Camera camera;
 
     public Game(){
-        mesh = ResourceLoader.loadMesh("cube.obj"); //new Mesh();
+        //mesh = ResourceLoader.loadMesh("cube.obj");
+        mesh = new Mesh();
+        texture = ResourceLoader.loadTexture("Marble.jpg");
+        System.out.println(texture.getID());
         shader = new Shader();
         camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,1), new Vector3f(0,1,0));
 
 
-        /* created pyramid
+         //created pyramid
         Vertex[] vertices = new Vertex[]{
-                new Vertex(new Vector3f(-1, -1, 0)),
-                new Vertex(new Vector3f(0, 1, 0)),
-                new Vertex(new Vector3f(1, -1, 0)),
-                new Vertex(new Vector3f(0, -1, 1))
+                new Vertex(new Vector3f(-1, -1, 0), new Vector2f(0,0)),
+                new Vertex(new Vector3f(0, 1, 0), new Vector2f(0.5f,0)),
+                new Vertex(new Vector3f(1, -1, 0), new Vector2f(1,0)),
+                new Vertex(new Vector3f(0, -1, 1), new Vector2f(0,0.5f))
         };
 
-        int[] indices = new int[] {0, 1, 3,
-                                    3,1,2,
-                                    2,1,0,
+        int[] indices = new int[] {3, 1, 0,
+                                    2,1,3,
+                                    0,1,2,
                                     0,2,3};
-        mesh.addVertices(vertices, indices);*/
+        mesh.addVertices(vertices, indices);
 
         Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         Transform.setCamera(camera);
@@ -50,7 +54,9 @@ public class Game {
     }
 
     public void input(){
-        if(GLFW_PRESS == Input.keys[GLFW_KEY_E]){
+        camera.input();
+
+        if(Input.getKey(GLFW_KEY_E)){
             System.out.println("Pressed E");
         }
 
@@ -66,9 +72,8 @@ public class Game {
 
     public void render(){
         shader.bind();
-        //System.out.println(transform.getProjectedTransformation().get(0, 0));
         shader.setUniform("transform", transform.getProjectedTransformation());
-
+        texture.bind();
         mesh.draw();
         shader.unbind();
     }

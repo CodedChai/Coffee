@@ -21,12 +21,7 @@ public class Quaternion {
     public Quaternion normalize(){
         float length = length();
 
-        x /= length;
-        y /= length;
-        z /= length;
-        w /= length;
-
-        return this;
+        return new Quaternion(x/length, y/length, z/length, w/length);
     }
 
     public Quaternion conjugate(){
