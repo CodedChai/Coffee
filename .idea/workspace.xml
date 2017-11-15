@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d54a736-7a6e-4a3e-9b19-1c8efc0d35b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/base/engine/BasicShader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/base/engine/Material.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/base/engine/PhongShader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Camera.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Camera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Game.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Matrix4f.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Matrix4f.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/RenderUtil.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/RenderUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Shader.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Shader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Vector2f.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Vector2f.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Vector3f.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Vector3f.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Window.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/Window.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/shaders/basicFragment.fs" afterPath="$PROJECT_DIR$/res/shaders/basicFragment.fs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/Camera.java" afterPath="$PROJECT_DIR$/src/com/base/engine/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/Game.java" afterPath="$PROJECT_DIR$/src/com/base/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/Matrix4f.java" afterPath="$PROJECT_DIR$/src/com/base/engine/Matrix4f.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/RenderUtil.java" afterPath="$PROJECT_DIR$/src/com/base/engine/RenderUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/Shader.java" afterPath="$PROJECT_DIR$/src/com/base/engine/Shader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/Vector2f.java" afterPath="$PROJECT_DIR$/src/com/base/engine/Vector2f.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/Vector3f.java" afterPath="$PROJECT_DIR$/src/com/base/engine/Vector3f.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/base/engine/Window.java" afterPath="$PROJECT_DIR$/src/com/base/engine/Window.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/shaders/phongFragment.fs" afterPath="$PROJECT_DIR$/res/shaders/phongFragment.fs" />
     </list>
     <ignored path="Coffee.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +25,7 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/base/engine/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="31">
               <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -57,7 +37,7 @@
       <file leaf-file-name="PhongShader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/base/engine/PhongShader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="450">
               <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding>
                 <element signature="e#179#180#0" expanded="true" />
@@ -103,7 +83,7 @@
       <file leaf-file-name="Shader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/base/engine/Shader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
+            <state relative-caret-position="1900">
               <caret line="89" column="96" lean-forward="false" selection-start-line="89" selection-start-column="96" selection-end-line="89" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,8 +95,8 @@
       <file leaf-file-name="RenderUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/base/engine/RenderUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="875">
+              <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1028#1029#0" expanded="true" />
@@ -223,7 +203,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -263,7 +243,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -593,11 +573,10 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.48957247" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938144" sideWeight="0.16475496" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20463918" sideWeight="0.16475496" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938144" sideWeight="0.8352451" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -615,6 +594,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973932" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.48957247" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1087,7 +1067,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/Shader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
+        <state relative-caret-position="1900">
           <caret line="89" column="96" lean-forward="false" selection-start-line="89" selection-start-column="96" selection-end-line="89" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1097,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/RenderUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="875">
+          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1028#1029#0" expanded="true" />
@@ -1117,7 +1097,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/PhongShader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="450">
           <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="e#179#180#0" expanded="true" />
@@ -1132,7 +1112,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="31">
           <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
