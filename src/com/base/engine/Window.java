@@ -88,6 +88,10 @@ public class Window {
         // Make the window visible
         glfwShowWindow(windowid);
 
+        // First time setup necessities
+        GL.createCapabilities();
+        RenderUtil.setClearColor(0.0f, 0.0f, 0.0f);
+        RenderUtil.initGraphics();
     }
 
     public static void render(){

@@ -1,13 +1,5 @@
 package com.base.engine;
 
-import org.lwjgl.BufferUtils;
-import org.lwjgl.opengl.GL12;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL30.*;
 
@@ -25,11 +17,15 @@ public class RenderUtil {
             glDisable(GL_TEXTURE_2D);
     }
 
+    public static void setClearColor(Vector3f color){
+        glClearColor(color.getX(), color.getY(), color.getZ(), 1.0f);
+    }
 
+    public static void setClearColor(float x, float y, float z){
+        glClearColor(x, y, z, 1.0f);
+    }
 
     public static void initGraphics(){
-        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-
         glFrontFace(GL_CW);
         glCullFace(GL_BACK);
         glEnable(GL_CULL_FACE);
@@ -40,6 +36,10 @@ public class RenderUtil {
         glEnable(GL_TEXTURE_2D);
         // For proper color reproduction
         glEnable(GL_FRAMEBUFFER_SRGB);
+    }
+
+    public static void unbindTextures(){
+        glBindTexture(GL_TEXTURE_2D, 0);
     }
 
     public static String getOpenGLVersion(){

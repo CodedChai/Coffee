@@ -61,30 +61,24 @@ public class Camera {
         pos = pos.add(dir.mul(amount));
     }
 
+    // Currently breaks
     public void rotateY(float angle){
-
-        Vector3f haxis = yAxis.cross(forward);
-        haxis.normalize();
+        Vector3f haxis = yAxis.cross(forward).normalize();
         System.out.println(forward.toString());
-        forward.rotate(angle, yAxis);
+        forward.rotate(angle, yAxis).normalize();
         System.out.println(forward.toString());
-        forward.normalize();
 
-        up = forward.cross(haxis);
-        up.normalize();
+        up = forward.cross(haxis).normalize();
     }
 
     // Tilting up and down
     public void rotateX(float angle){
 
-        Vector3f haxis = yAxis.cross(forward);
-        haxis.normalize();
+        Vector3f haxis = yAxis.cross(forward).normalize();
 
-        forward.rotate(angle, haxis);
-        forward.normalize();
+        forward.rotate(angle, haxis).normalize();
 
-        up = forward.cross(haxis);
-        up.normalize();
+        up = forward.cross(haxis).normalize();
     }
 
     public Vector3f getLeft(){

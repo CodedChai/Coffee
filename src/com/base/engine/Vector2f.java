@@ -20,10 +20,7 @@ public class Vector2f {
     public Vector2f normalize(){
         float length = length();
 
-        x /= length;
-        y /= length;
-
-        return this;
+        return new Vector2f(x/length, x/length);
     }
 
     public Vector2f rotate(float angle){

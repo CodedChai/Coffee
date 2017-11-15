@@ -12,17 +12,16 @@ public class Game {
     private Mesh mesh;
     private Shader shader;
     private Transform transform;
-    private Texture texture;
+    private Material material;
     private Camera camera;
 
     public Game(){
         //mesh = ResourceLoader.loadMesh("cube.obj");
         mesh = new Mesh();
-        texture = ResourceLoader.loadTexture("Marble.jpg");
-        System.out.println(texture.getID());
-        shader = new Shader();
+        material = new Material(ResourceLoader.loadTexture("Marble.jpg"), new Vector3f(1.0f, 1.0f, 1.0f));
+        shader = PhongShader.getInstance();
         camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,1), new Vector3f(0,1,0));
-
+        transform = new Transform();
 
          //created pyramid
         Vertex[] vertices = new Vertex[]{
@@ -40,13 +39,8 @@ public class Game {
 
         Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         Transform.setCamera(camera);
-        transform = new Transform();
 
-        shader.addVertexShader(ResourceLoader.loadShader("basicVertex.vs"));
-        shader.addFragmentShader(ResourceLoader.loadShader("basicFragment.fs"));
-        shader.compileShader();
-
-        shader.addUniform("transform");
+        PhongShader.setAmbientLight(new Vector3f(0.1f, 0.1f, 0.1f));
     }
 
     public void start(){
@@ -71,9 +65,9 @@ public class Game {
     }
 
     public void render(){
+        RenderUtil.setClearColor(Transform.getCamera().getPos().div(2048f).Abs());
         shader.bind();
-        shader.setUniform("transform", transform.getProjectedTransformation());
-        texture.bind();
+        shader.updateUniforms(transform.getTransformation(), transform.getProjectedTransformation(), material);
         mesh.draw();
         shader.unbind();
     }
