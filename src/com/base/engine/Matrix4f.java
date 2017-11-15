@@ -79,9 +79,10 @@ public class Matrix4f {
     public Matrix4f CameraRotation(Vector3f forward, Vector3f up){
         Vector3f f = forward.normalize();
 
-        Vector3f r = up.normalize();
-        r = r.cross(f);
+        Vector3f r = new Vector3f(up.normalize().getX(), up.normalize().getY(), up.normalize().getZ());
+        //System.out.println(f.normalize().getX() + " " + f.normalize().getY() + " " + f.normalize().getZ());
 
+        r = r.cross(f);
         Vector3f u = f.cross(r);
 
         return InitRotation(f, u, r);

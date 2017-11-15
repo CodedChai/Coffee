@@ -12,7 +12,7 @@ public class Vector3f {
     }
 
     public float length(){
-        return (float)Math.sqrt(x * x + y * y * + z * z);
+        return (float)Math.sqrt(x * x + y * y + z * z);
     }
 
     public float dot(Vector3f right){
@@ -22,11 +22,7 @@ public class Vector3f {
     public Vector3f normalize(){
         float length = length();
 
-        x /= length;
-        y /= length;
-        z /= length;
-
-        return this;
+        return new Vector3f(x / length, y / length, z / length);
     }
 
     public Vector3f cross(Vector3f right){
@@ -38,24 +34,12 @@ public class Vector3f {
     }
 
     public Vector3f rotate(float angle, Vector3f axis){
-        float sinHalfAngle = (float)Math.sin(Math.toRadians(angle / 2));
-        float cosHalfAngle = (float)Math.cos(Math.toRadians(angle / 2));
+        float sinAngle = (float)Math.sin(-angle);
+        float cosAngle = (float)Math.cos(-angle);
 
-        float rX = axis.getX() * sinHalfAngle;
-        float rY = axis.getY() * sinHalfAngle;
-        float rZ = axis.getZ() * sinHalfAngle;
-        float rW = cosHalfAngle;
-
-        Quaternion rotation = new Quaternion(rX, rY, rZ, rW);
-        Quaternion conjugate = rotation.conjugate();
-
-        Quaternion w = rotation.mul(this).mul(conjugate);
-
-        x = w.getX();
-        y = w.getY();
-        z = w.getZ();
-
-        return this;
+        return this.cross(axis.mul(sinAngle)).add(           //Rotation on local X
+                (this.mul(cosAngle)).add(                     //Rotation on local Z
+                        axis.mul(this.dot(axis.mul(1 - cosAngle))))); //Rotation on local Y
     }
 
     public Vector3f add(Vector3f right){

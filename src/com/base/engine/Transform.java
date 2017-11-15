@@ -18,6 +18,7 @@ public class Transform {
         translation = new Vector3f(0,0,0);
         rotation = new Vector3f(0,0,0);
         scale = new Vector3f(1, 1, 1);
+        camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,1), new Vector3f(0,1,0));
     }
 
     public Matrix4f getTransformation(){
@@ -31,12 +32,18 @@ public class Transform {
     public Matrix4f getProjectedTransformation(){
         Matrix4f transformationMatrix = getTransformation();
         Matrix4f projectionMatrix = new Matrix4f().Projection(fov, width, height, zNear, zFar);
+        //camera.setForward(new Vector3f(0, 1, 0));
+        //camera.setUp(new Vector3f(0,0,1));
+
         Matrix4f camRotation = new Matrix4f().CameraRotation(camera.getForward(), camera.getUp());
         Matrix4f cameraTranslation = new Matrix4f().Translation(-camera.getPos().getX(), -camera.getPos().getY(), -camera.getPos().getZ());
 
+        //camRotation.Identity();
+        //System.out.println(camRotation.get(0,0));
 
-        return projectionMatrix.mul(cameraTranslation.mul(transformationMatrix));
-        //return projectionMatrix.mul(camRotation.mul(cameraTranslation.mul(transformationMatrix)));
+
+        //return projectionMatrix.mul(cameraTranslation.mul(transformationMatrix));
+        return projectionMatrix.mul(camRotation.mul(cameraTranslation.mul(transformationMatrix)));
 
     }
 

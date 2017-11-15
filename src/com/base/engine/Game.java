@@ -17,7 +17,8 @@ public class Game {
     public Game(){
         mesh = ResourceLoader.loadMesh("cube.obj"); //new Mesh();
         shader = new Shader();
-        camera = new Camera();
+        camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,1), new Vector3f(0,1,0));
+
 
         /* created pyramid
         Vertex[] vertices = new Vertex[]{
@@ -65,6 +66,7 @@ public class Game {
 
     public void render(){
         shader.bind();
+        //System.out.println(transform.getProjectedTransformation().get(0, 0));
         shader.setUniform("transform", transform.getProjectedTransformation());
 
         mesh.draw();
