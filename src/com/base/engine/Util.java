@@ -27,12 +27,16 @@ public class Util {
 
     public static FloatBuffer createFlippedBuffer(Vertex[] vertices){
         FloatBuffer buffer = createFloatBuffer(vertices.length * Vertex.SIZE);
+
         for(int i = 0; i < vertices.length; i++){
             buffer.put(vertices[i].getPos().getX());
             buffer.put(vertices[i].getPos().getY());
             buffer.put(vertices[i].getPos().getZ());
             buffer.put(vertices[i].getTexCoord().getX());
             buffer.put(vertices[i].getTexCoord().getY());
+            buffer.put(vertices[i].getNormal().getX());
+            buffer.put(vertices[i].getNormal().getY());
+            buffer.put(vertices[i].getNormal().getZ());
         }
         buffer.flip();
 
