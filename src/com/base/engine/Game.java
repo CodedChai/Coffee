@@ -15,9 +15,14 @@ public class Game {
     private Material material;
     private Camera camera;
 
-    PointLight pLight1 = new PointLight(new BaseLight(new Vector3f(1, 0.5f, 0), 0.8f), new Attenuation(0,0,1), new Vector3f(-2f, 0f, 5f),10f);
-    PointLight pLight2 = new PointLight(new BaseLight(new Vector3f(0, 0, 1), 0.8f), new Attenuation(0,0,1), new Vector3f(2f, 0f, 5f), 11f);
+    PointLight pLight1 = new PointLight(new BaseLight(new Vector3f(1, 0.5f, 0), 0.8f),
+            new Attenuation(0,0,1), new Vector3f(-2f, 0f, 5f),10f);
+    PointLight pLight2 = new PointLight(new BaseLight(new Vector3f(0, 0, 1), 0.8f),
+            new Attenuation(0,0,1), new Vector3f(2f, 0f, 5f), 11f);
 
+    SpotLight sLight1 = new SpotLight(new PointLight(new BaseLight(new Vector3f(0f, 1f, 1f), 0.8f),
+            new Attenuation(0,0,0.1f), new Vector3f(-2f, 0f, 5f),30f),
+            new Vector3f(1,1,1), 0.7f);
 
     public Game(){
         //mesh = ResourceLoader.loadMesh("cube.obj");
@@ -57,7 +62,8 @@ public class Game {
         PhongShader.setAmbientLight(new Vector3f(0.2f, 0.2f, 0.2f));
         PhongShader.setDirectionalLight(new DirectionalLight(new BaseLight(new Vector3f(1,1,1), 0.8f), new Vector3f(1,1,1)));
 
-        PhongShader.setPointLight(new PointLight[]{pLight1, pLight2});
+        //PhongShader.setPointLight(new PointLight[]{pLight1, pLight2});
+        PhongShader.setSpotLight(new SpotLight[]{sLight1});
     }
 
     public void start(){
@@ -81,6 +87,9 @@ public class Game {
         pLight2.setAtten(new Attenuation(0, 0, (float)(Math.cos(temp))));
         pLight1.setPosition(new Vector3f(3, -.8f, 8.0f * (float)(Math.sin(temp) + 1.0/2.0) + 10));
         pLight2.setPosition(new Vector3f(7, -.8f, 8.0f * (float)(Math.cos(temp) + 1.0/2.0) + 10));
+        sLight1.getPointLight().setPosition(camera.getPos());
+        sLight1.setDirection(camera.getForward());
+        //System.out.println(camera.getForward().toString());
         //transform.setTranslation((float)Math.sin(temp),(float)Math.abs(Math.cos(temp)),5);
         //transform.setRotation(0, (float)Math.sin(temp) * 180, (float)Math.sin(temp) * 180);
         //transform.setScale((float)Math.abs(Math.sin(temp)), (float)Math.abs(Math.sin(temp)), (float)Math.abs(Math.sin(temp)));

@@ -23,7 +23,7 @@ public class Camera {
 
     public void input(){
         float movAmount = (float)(10 * Time.getDelta());
-        float rotAmount = (float)(100 * Time.getDelta());
+        float rotAmount = (float)(6 * Time.getDelta());
         //System.out.println(forward.toString());
 
         if(Input.getKey(GLFW_KEY_W)){
@@ -40,7 +40,6 @@ public class Camera {
         }
 
         if(Input.getKey(GLFW_KEY_UP)){
-
             rotateX(-rotAmount);
         }
         if(Input.getKey(GLFW_KEY_DOWN)){
@@ -61,24 +60,34 @@ public class Camera {
         pos = pos.add(dir.mul(amount));
     }
 
-    // Currently breaks
+    // Look left and right
     public void rotateY(float angle){
         Vector3f haxis = yAxis.cross(forward).normalize();
-        //System.out.println(forward.toString());
-        Vector3f f = forward.rotate(angle, yAxis).normalize();
-        //System.out.println(forward.toString());
+        Vector3f y = new Vector3f(yAxis.getX(), yAxis.getY(), yAxis.getZ());
+        Vector3f t = forward.rotate(angle, y);
 
-        up = f.cross(haxis).normalize();
+        forward = forward.add(t);
+        forward = forward.normalize();
+
+        up = forward.cross(haxis).normalize();
+        up = up.normalize();
+
+        System.out.println(up.toString());
+
     }
 
     // Tilting up and down
     public void rotateX(float angle){
 
         Vector3f haxis = yAxis.cross(forward).normalize();
+        //System.out.println(haxis.toString());
+        Vector3f t = forward.rotate(angle, haxis);
+        forward = forward.add(t);
+        System.out.println(forward.toString());
 
-        Vector3f f = forward.rotate(angle, haxis).normalize();
+        forward = forward.normalize();
 
-        up = f.cross(haxis).normalize();
+        up = forward.cross(haxis).normalize();
     }
 
     public Vector3f getLeft(){
