@@ -6,7 +6,7 @@ import static org.lwjgl.glfw.GLFW.*;
 public class Input extends GLFWKeyCallback {
 
     public static int[] keys = new int[65535];
-
+    public static float xpos, ypos;
     @Override
     public void invoke(long window, int key, int scancode, int action, int mods) {
         keys[key] = action;
@@ -25,4 +25,25 @@ public class Input extends GLFWKeyCallback {
         }
         return false;
     }
+
+    public static void hideCursor(){
+        glfwSetInputMode(Window.windowid, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    }
+
+    public static void showCursor(){
+        glfwSetInputMode(Window.windowid, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    }
+
+    public static boolean getMouseButton(int buttonCode){
+        int state = glfwGetMouseButton(Window.windowid, buttonCode);
+        if(state == GLFW_PRESS){
+            return true;
+        }
+        return false;
+    }
+    public static void cursorPosition(){
+
+    }
+
+
 }

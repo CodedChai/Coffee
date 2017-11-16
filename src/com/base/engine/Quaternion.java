@@ -29,21 +29,21 @@ public class Quaternion {
     }
 
     public Quaternion mul(Quaternion right){
+        float w_ = w * right.getW() - x * right.getX() - y * right.getY() - z * right.getZ();
         float x_ = x * right.getW() + w * right.getX() + y * right.getZ() - z * right.getY();
         float y_ = y * right.getW() + w * right.getY() + z * right.getX() - x * right.getZ();
         float z_ = z * right.getW() + w * right.getZ() + x + right.getY() - y * right.getX();
-        float w_ = w * right.getW() - x * right.getX() - y * right.getY() - z * right.getZ();
 
         return new Quaternion(x_, y_, z_, w_);
     }
 
     public Quaternion mul(Vector3f right){
-        float x_ = w * right.getX() + y * right.getZ() - z * right.getY();
-        float y_ = w * right.getY() + z * right.getX() - x * right.getZ();
-        float z_ = w * right.getZ() + x * right.getY() - y * right.getX();
         float w_ = -x * right.getX() - y * right.getY() - z * right.getZ();
+        float x_ =  w * right.getX() + y * right.getZ() - z * right.getY();
+        float y_ =  w * right.getY() + z * right.getX() - x * right.getZ();
+        float z_ =  w * right.getZ() + x * right.getY() - y * right.getX();
 
-        return  new Quaternion(x_, y_, z_, w_);
+        return new Quaternion(x_, y_, z_, w_);
     }
 
     public Quaternion Mul(float r)
@@ -82,4 +82,9 @@ public class Quaternion {
     public void setW(float w) {
         this.w = w;
     }
+
+    public String toString(){
+        return "(" + x + ", " + y + ", " + z + ", " + w + ")";
+    }
+
 }

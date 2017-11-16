@@ -64,11 +64,11 @@ public class Camera {
     // Currently breaks
     public void rotateY(float angle){
         Vector3f haxis = yAxis.cross(forward).normalize();
-        System.out.println(forward.toString());
-        forward.rotate(angle, yAxis).normalize();
-        System.out.println(forward.toString());
+        //System.out.println(forward.toString());
+        Vector3f f = forward.rotate(angle, yAxis).normalize();
+        //System.out.println(forward.toString());
 
-        up = forward.cross(haxis).normalize();
+        up = f.cross(haxis).normalize();
     }
 
     // Tilting up and down
@@ -76,9 +76,9 @@ public class Camera {
 
         Vector3f haxis = yAxis.cross(forward).normalize();
 
-        forward.rotate(angle, haxis).normalize();
+        Vector3f f = forward.rotate(angle, haxis).normalize();
 
-        up = forward.cross(haxis).normalize();
+        up = f.cross(haxis).normalize();
     }
 
     public Vector3f getLeft(){

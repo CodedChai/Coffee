@@ -43,15 +43,24 @@ public class Vector3f {
         float rW = cosHalfAngle;
 
         Quaternion rotation = new Quaternion(rX, rY, rZ, rW);
+        System.out.println(rotation.toString());
+
         Quaternion conjugate = rotation.conjugate();
 
+        System.out.println(conjugate.toString());
+
         Quaternion w = rotation.mul(this).mul(conjugate);
+
+        System.out.println(w.toString());
+
 
         x = w.getX();
         y = w.getY();
         z = w.getZ();
 
         return this;
+
+        //return new Vector3f(w.getX(), w.getY(), w.getZ());
     }
 
     public Vector3f rotate(Quaternion rotation)
@@ -123,6 +132,14 @@ public class Vector3f {
     public void setZ(float z) {
         this.z = z;
     }
+
+    public Vector2f getXY() { return new Vector2f(x, y); }
+    public Vector2f getYZ() { return new Vector2f(y, z); }
+    public Vector2f getZX() { return new Vector2f(z, x); }
+
+    public Vector2f getYX() { return new Vector2f(y, x); }
+    public Vector2f getZY() { return new Vector2f(z, y); }
+    public Vector2f getXZ() { return new Vector2f(x, z); }
 
     public String toString(){
         return "(" + x + ", " + y + ", " + z + ")";

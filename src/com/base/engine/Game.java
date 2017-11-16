@@ -15,15 +15,19 @@ public class Game {
     private Material material;
     private Camera camera;
 
+    PointLight pLight1 = new PointLight(new BaseLight(new Vector3f(1, 0.5f, 0), 0.8f), new Attenuation(0,0,1), new Vector3f(-2f, 0f, 5f),10f);
+    PointLight pLight2 = new PointLight(new BaseLight(new Vector3f(0, 0, 1), 0.8f), new Attenuation(0,0,1), new Vector3f(2f, 0f, 5f), 11f);
+
+
     public Game(){
         //mesh = ResourceLoader.loadMesh("cube.obj");
         mesh = new Mesh();
-        material = new Material(ResourceLoader.loadTexture("Marble.jpg"), new Vector3f(1.0f, 1.0f, 1.0f));
+        material = new Material(ResourceLoader.loadTexture("Marble.jpg"), new Vector3f(1.0f, 1.0f, 1.0f), 1, 8);
         shader = PhongShader.getInstance();
         camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,1), new Vector3f(0,1,0));
         transform = new Transform();
 
-         //created pyramid
+         /*//created pyramid
         Vertex[] vertices = new Vertex[]{
                 new Vertex(new Vector3f(-1.0f, -1.0f, 0.5773f), new Vector2f(0.0f,0.0f)),
                 new Vertex(new Vector3f(0.0f, -1.0f, -1.15475f), new Vector2f(0.5f,0.0f)),
@@ -34,14 +38,26 @@ public class Game {
         int[] indices = new int[] {0, 3, 1,
                                     1,3,2,
                                     2,3,0,
-                                    1,2,0};
+                                    1,2,0};*/
+        float fieldDepth = 10.0f;
+        float fieldWidth = 10.0f;
+        Vertex[] vertices = new Vertex[] {  new Vertex(new Vector3f(-fieldWidth, 0.0f, -fieldDepth), new Vector2f(0.0f, 0.0f)),
+                                            new Vertex(new Vector3f(-fieldWidth, 0.0f, fieldDepth * 3), new Vector2f(0.0f, 1.0f)),
+                                            new Vertex(new Vector3f(fieldWidth * 3, 0.0f, -fieldDepth), new Vector2f(1.0f, 0.0f)),
+                                            new Vertex(new Vector3f(fieldWidth * 3, 0.0f, fieldDepth * 3), new Vector2f(1.0f, 1.0f))
+        };
+
+        int indices[] = {   0, 1, 2,
+                            2, 1, 3};
         mesh.addVertices(vertices, indices, true);
 
         Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
         Transform.setCamera(camera);
 
-        PhongShader.setAmbientLight(new Vector3f(0.1f, 0.1f, 0.1f));
+        PhongShader.setAmbientLight(new Vector3f(0.2f, 0.2f, 0.2f));
         PhongShader.setDirectionalLight(new DirectionalLight(new BaseLight(new Vector3f(1,1,1), 0.8f), new Vector3f(1,1,1)));
+
+        PhongShader.setPointLight(new PointLight[]{pLight1, pLight2});
     }
 
     public void start(){
@@ -54,14 +70,19 @@ public class Game {
         if(Input.getKey(GLFW_KEY_E)){
             System.out.println("Pressed E");
         }
-
     }
 
     float temp = 0.0f;
     public void update(){
         temp += Time.getDelta();
-        transform.setTranslation((float)Math.sin(temp),(float)Math.abs(Math.cos(temp)),5);
-        transform.setRotation(0, (float)Math.sin(temp) * 180, (float)Math.sin(temp) * 180);
+        transform.setTranslation(0, -1, 5);
+
+        pLight1.setAtten(new Attenuation(0, 0, (float)(Math.sin(temp))));
+        pLight2.setAtten(new Attenuation(0, 0, (float)(Math.cos(temp))));
+        pLight1.setPosition(new Vector3f(3, -.8f, 8.0f * (float)(Math.sin(temp) + 1.0/2.0) + 10));
+        pLight2.setPosition(new Vector3f(7, -.8f, 8.0f * (float)(Math.cos(temp) + 1.0/2.0) + 10));
+        //transform.setTranslation((float)Math.sin(temp),(float)Math.abs(Math.cos(temp)),5);
+        //transform.setRotation(0, (float)Math.sin(temp) * 180, (float)Math.sin(temp) * 180);
         //transform.setScale((float)Math.abs(Math.sin(temp)), (float)Math.abs(Math.sin(temp)), (float)Math.abs(Math.sin(temp)));
     }
 
