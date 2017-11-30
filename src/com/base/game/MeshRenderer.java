@@ -2,7 +2,6 @@ package com.base.game;
 
 import com.base.engine.core.Component;
 import com.base.engine.core.Transform;
-import com.base.engine.rendering.BasicShader;
 import com.base.engine.rendering.Material;
 import com.base.engine.rendering.Mesh;
 import com.base.engine.rendering.Shader;
@@ -28,10 +27,9 @@ public class MeshRenderer implements Component {
     }
 
     @Override
-    public void render(Transform transform) {
-        Shader shader = BasicShader.getInstance();
+    public void render(Transform transform, Shader shader) {
         shader.bind();
-        shader.updateUniforms(transform.getTransformation(), transform.getProjectedTransformation(), material);
+        shader.updateUniforms(transform, material);
         mesh.draw();
         shader.unbind();
     }

@@ -5,18 +5,16 @@ import com.base.engine.rendering.*;
 
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_E;
 
-public class TestGame implements Game {
+public class TestGame extends Game {
 
-    private Camera camera;
-    private GameObject root;
+    //private Camera camera;
 
     public TestGame(){
 
     }
 
     public void init(){
-        root = new GameObject();
-        camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,1), new Vector3f(0,1,0));
+        //camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,1), new Vector3f(0,1,0));
 
         float fieldDepth = 10.0f;
         float fieldWidth = 10.0f;
@@ -32,27 +30,31 @@ public class TestGame implements Game {
         Material material = new Material(new Texture("Marble.jpg"), new Vector3f(1.0f, 1.0f, 1.0f), 1, 16);
 
         MeshRenderer meshRenderer = new MeshRenderer(mesh, material);
-        root.addComponent(meshRenderer);
 
-        Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
-        Transform.setCamera(camera);
+        GameObject planeObject = new GameObject();
+        planeObject.addComponent(meshRenderer);
+        planeObject.getTransform().setTranslation(0, -1, 5);
+        getRootObject().addChild(planeObject);
+
+        //Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
+        //Transform.setCamera(camera);
     }
 
-    public void input(){
-        camera.input();
-        root.input();
-        if(Input.getKey(GLFW_KEY_E)){
-            System.out.println("Pressed E");
-        }
-    }
-
-
-    public void update(){
-        root.getTransform().setTranslation(0, -1, 5);
-        root.update();
- }
-
-    public void render(){
-        root.render();
-    }
+//    public void input(){
+//        camera.input();
+//        root.input();
+//        if(Input.getKey(GLFW_KEY_E)){
+//            System.out.println("Pressed E");
+//        }
+//    }
+//
+//
+//    public void update(){
+//        root.getTransform().setTranslation(0, -1, 5);
+//        root.update();
+// }
+//
+//    public void render(){
+//        root.render();
+//    }
 }

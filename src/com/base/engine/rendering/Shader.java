@@ -1,8 +1,6 @@
 package com.base.engine.rendering;
 
-import com.base.engine.core.Matrix4f;
-import com.base.engine.core.Util;
-import com.base.engine.core.Vector3f;
+import com.base.engine.core.*;
 import org.lwjgl.opengl.GL20;
 
 import java.io.BufferedReader;
@@ -16,7 +14,7 @@ public class Shader {
 
     private int program;
     private HashMap<String, Integer> uniforms;
-
+    private RenderingEngine renderingEngine;
 
     public Shader(){
         program = glCreateProgram();
@@ -106,7 +104,7 @@ public class Shader {
         glAttachShader(program, shader);
     }
 
-    public void updateUniforms(Matrix4f worldMatrix, Matrix4f projectedMatrix, Material material){
+    public void updateUniforms(Transform transform, Material material){
 
     }
 
@@ -147,4 +145,11 @@ public class Shader {
         return shaderSource.toString();
     }
 
+    public void setRenderingEngine(RenderingEngine renderingEngine){
+        this.renderingEngine = renderingEngine;
+    }
+
+    public RenderingEngine getRenderingEngine(){
+        return renderingEngine;
+    }
 }

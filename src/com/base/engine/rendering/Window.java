@@ -8,6 +8,7 @@ import org.lwjgl.system.*;
 import java.nio.*;
 
 import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.glClearColor;
 import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
@@ -90,8 +91,7 @@ public class Window {
 
         // First time setup necessities
         GL.createCapabilities();
-        RenderUtil.setClearColor(0.0f, 0.0f, 0.0f);
-        RenderUtil.initGraphics();
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     }
 
     public static void render(){
@@ -102,24 +102,14 @@ public class Window {
         // bindings available for use.
         GL.createCapabilities();
 
-
-        RenderUtil.initGraphics();
-
         // Run the rendering loop until the user has attempted to close
         // the window or has pressed the ESCAPE key.
-        if ( !glfwWindowShouldClose(windowid) ) {
-            RenderUtil.clearScreen();
-        }
-    }
-
-    public static void lateRender(){
         if ( !glfwWindowShouldClose(windowid) ) {
             glfwSwapBuffers(windowid); // swap the color buffers
 
             // Poll for window events. The key callback above will only be
             // invoked during this call.
-            glfwPollEvents();
-        }
+            glfwPollEvents();        }
     }
 
     public static void setTitle(CharSequence title) {
