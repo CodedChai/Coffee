@@ -75,7 +75,7 @@ public class PhongShader extends Shader {
 
         setUniformf("specularIntensity", material.getSpecularIntensity());
         setUniformf("specularPower", material.getSpecularPower());
-        setUniform("eyePos", getRenderingEngine().getMainCamera().getPos());
+        setUniform("eyePos", getRenderingEngine().getMainCamera().getPosition());
 
         setUniform("ambientLight", ambientLight);
         setUniform("directionalLight", directionalLight);

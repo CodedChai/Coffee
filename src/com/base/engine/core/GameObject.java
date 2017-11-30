@@ -39,23 +39,23 @@ public class GameObject {
         components.remove(index);
     }
 
-    public void input(){
+    public void input(float delta){
         for(Component component : components){
-            component.input(transform);
+            component.input(transform, delta);
         }
 
         for(GameObject child : children){
-            child.input();
+            child.input(delta);
         }
     }
 
-    public void update(){
+    public void update(float delta){
         for(Component component : components){
-            component.update(transform);
+            component.update(transform, delta);
         }
 
         for(GameObject child : children){
-            child.update();
+            child.update(delta);
         }
     }
 

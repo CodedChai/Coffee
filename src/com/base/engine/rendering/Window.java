@@ -1,6 +1,7 @@
 package com.base.engine.rendering;
 
 import com.base.engine.core.Input;
+import com.base.engine.core.Vector2f;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
@@ -144,6 +145,10 @@ public class Window {
 
     public static int getWidth(){
         return w;
+    }
+
+    public Vector2f getCenter(){
+        return new Vector2f(getWidth()/2f, getHeight()/2f);
     }
 
 }

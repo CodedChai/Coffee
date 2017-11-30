@@ -10,13 +10,13 @@ import static org.lwjgl.glfw.GLFW.*;
 public class Camera {
     public static final Vector3f yAxis = new Vector3f(0, 1, 0); // Up in the world
 
-    private Vector3f pos;
+    private Vector3f position;
     private Vector3f forward;
     private Vector3f up;
     private Matrix4f projection;
 
     public Camera(float fov, float aspectRatio, float zNear, float zFar){
-        this.pos = new Vector3f(0,0,0);
+        this.position = new Vector3f(0,0,0);
         this.forward = new Vector3f(0,0,1);
         this.up = new Vector3f(0,1,0);
         this.projection = new Matrix4f().initPerspective(fov, aspectRatio, zNear, zFar);
@@ -24,14 +24,14 @@ public class Camera {
 
     public Matrix4f getViewProjection(){
         Matrix4f camRotation = new Matrix4f().InitRotation(forward, up);
-        Matrix4f cameraTranslation = new Matrix4f().Translation(-pos.getX(), -pos.getY(), -pos.getZ());
+        Matrix4f cameraTranslation = new Matrix4f().Translation(-position.getX(), -position.getY(), -position.getZ());
 
         return projection.mul(camRotation.mul(cameraTranslation));
     }
 
-    public void input(){
-        float movAmount = (float)(10 * Time.getDelta());
-        float rotAmount = (float)(2 * Time.getDelta());
+    public void input(float delta){
+        float movAmount = (float)(10 * delta);
+        float rotAmount = (float)(2 * delta);
 
         if(Input.getKey(GLFW_KEY_W)){
             move(forward, movAmount);
@@ -62,7 +62,7 @@ public class Camera {
 
     public void move(Vector3f dir, float amount){
 
-        pos = pos.add(dir.mul(amount));
+        position = position.add(dir.mul(amount));
     }
 
     // Look left and right
@@ -103,12 +103,12 @@ public class Camera {
         return right;
     }
 
-    public Vector3f getPos() {
-        return pos;
+    public Vector3f getPosition() {
+        return position;
     }
 
-    public void setPos(Vector3f pos) {
-        this.pos = pos;
+    public void setPosition(Vector3f position) {
+        this.position = position;
     }
 
     public Vector3f getForward() {

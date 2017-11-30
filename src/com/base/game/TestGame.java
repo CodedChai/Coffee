@@ -50,7 +50,7 @@ public class TestGame extends Game {
 //
 //
 //    public void update(){
-//        root.getTransform().setTranslation(0, -1, 5);
+//        root.getTransform().setPosition(0, -1, 5);
 //        root.update();
 // }
 //
