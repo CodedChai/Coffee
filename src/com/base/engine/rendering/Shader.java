@@ -108,6 +108,11 @@ public class Shader {
 
     }
 
+    // For older OpenGL
+    public void setAttributeLocation(String attributeName, int location){
+        glBindAttribLocation(program, location, attributeName);
+    }
+
     public void setUniformi(String uniformName, int value){
         glUniform1i(uniforms.get(uniformName), value);
     }
