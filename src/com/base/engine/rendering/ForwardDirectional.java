@@ -1,5 +1,6 @@
 package com.base.engine.rendering;
 
+import com.base.engine.components.DirectionalLight;
 import com.base.engine.core.Matrix4f;
 import com.base.engine.core.Transform;
 
@@ -43,7 +44,7 @@ public class ForwardDirectional extends Shader {
         setUniform("model", worldMatrix);
         setUniform("MVP", projectedMatrix);
 
-        setUniform("directionalLight", getRenderingEngine().getDirectionalLight());
+        setUniform("directionalLight", getRenderingEngine().getActiveDirectionalLight());
 
     }
 

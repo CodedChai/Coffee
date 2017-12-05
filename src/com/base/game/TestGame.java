@@ -1,9 +1,10 @@
 package com.base.game;
 
+import com.base.engine.components.DirectionalLight;
+import com.base.engine.components.MeshRenderer;
+import com.base.engine.components.PointLight;
 import com.base.engine.core.*;
 import com.base.engine.rendering.*;
-
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_E;
 
 public class TestGame extends Game {
 
@@ -34,27 +35,23 @@ public class TestGame extends Game {
         GameObject planeObject = new GameObject();
         planeObject.addComponent(meshRenderer);
         planeObject.getTransform().setTranslation(0, -1, 5);
-        getRootObject().addChild(planeObject);
 
-        //Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
-        //Transform.setCamera(camera);
+        GameObject directionalLightObject = new GameObject();
+        DirectionalLight directionalLight = new DirectionalLight(new BaseLight(new Vector3f(1,0,0), 0.4f),
+                new Vector3f(1,-1,1));
+
+        directionalLightObject.addComponent(directionalLight);
+
+        GameObject pointLightObject = new GameObject();
+        PointLight pointLight = new PointLight(new BaseLight(new Vector3f(0, 1, 0), 0.2f),
+                        new Attenuation(0,0,1),
+                        new Vector3f(5, 0,5), 100f);
+
+        pointLightObject.addComponent(pointLight);
+
+        getRootObject().addChild(planeObject);
+        getRootObject().addChild(directionalLightObject);
+        getRootObject().addChild(pointLightObject);
     }
 
-//    public void input(){
-//        camera.input();
-//        root.input();
-//        if(Input.getKey(GLFW_KEY_E)){
-//            System.out.println("Pressed E");
-//        }
-//    }
-//
-//
-//    public void update(){
-//        root.getTransform().setPosition(0, -1, 5);
-//        root.update();
-// }
-//
-//    public void render(){
-//        root.render();
-//    }
 }

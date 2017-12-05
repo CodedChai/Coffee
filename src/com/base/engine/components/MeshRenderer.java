@@ -1,12 +1,11 @@
-package com.base.game;
+package com.base.engine.components;
 
-import com.base.engine.core.Component;
 import com.base.engine.core.Transform;
 import com.base.engine.rendering.Material;
 import com.base.engine.rendering.Mesh;
 import com.base.engine.rendering.Shader;
 
-public class MeshRenderer implements Component {
+public class MeshRenderer extends Component {
 
     private Mesh mesh;
     private Material material;
@@ -14,16 +13,6 @@ public class MeshRenderer implements Component {
     public MeshRenderer(Mesh mesh, Material material){
         this.mesh = mesh;
         this.material = material;
-    }
-
-    @Override
-    public void input(Transform transform, float delta) {
-
-    }
-
-    @Override
-    public void update(Transform transform, float delta) {
-
     }
 
     @Override
