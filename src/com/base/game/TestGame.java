@@ -32,7 +32,7 @@ public class TestGame extends Game {
 
         GameObject planeObject = new GameObject();
         planeObject.addComponent(meshRenderer);
-        planeObject.getTransform().setTranslation(0, -1, 5);
+        planeObject.getTransform().getPosition().set(0, -1, 5);
 
         GameObject directionalLightObject = new GameObject();
         DirectionalLight directionalLight = new DirectionalLight(new Vector3f(1,0,0), 0.2f,
@@ -51,7 +51,7 @@ public class TestGame extends Game {
                 new Vector3f(-1, -1, 0), 0.4f);
         spotLightObject.addComponent(spotLight);
 
-        spotLightObject.getTransform().setPosition(5f, 0f, 5f);
+        spotLightObject.getTransform().getPosition().set(5f, 0f, 5f);
 
         getRootObject().addChild(planeObject);
         getRootObject().addChild(directionalLightObject);

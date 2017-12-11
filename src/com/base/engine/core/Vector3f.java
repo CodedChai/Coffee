@@ -121,6 +121,10 @@ public class Vector3f {
         return Math.max(x, Math.max(y, z));
     }
 
+    public void set(float x, float y, float z){
+        this.x = x; this.y = y; this.z = z;
+    }
+
     public float getX() {
         return x;
     }
