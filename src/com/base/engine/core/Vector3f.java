@@ -117,6 +117,10 @@ public class Vector3f {
         return new Vector3f(x / right, y / right, z / right);
     }
 
+    public float max(){
+        return Math.max(x, Math.max(y, z));
+    }
+
     public float getX() {
         return x;
     }

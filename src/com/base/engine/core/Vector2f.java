@@ -71,6 +71,10 @@ public class Vector2f {
         return new Vector2f(x / right, y / right);
     }
 
+    public float max(){
+        return Math.max(x, y);
+    }
+
     public String toString(){
         return "(" + x + ", " + y + ")";
     }

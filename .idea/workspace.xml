@@ -2,32 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d54a736-7a6e-4a3e-9b19-1c8efc0d35b1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/base/engine/rendering/RenderingEngine.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/DirectionalLight.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/DirectionalLight.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/BaseLight.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/BaseLight.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/Component.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/Component.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/MeshRenderer.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/MeshRenderer.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/PointLight.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/PointLight.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/core/RenderingEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/Attenuation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/BaseLight.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/ForwardDirectional.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/ForwardDirectional.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/SpotLight.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/components/SpotLight.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/core/GameObject.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/core/GameObject.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/ForwardPoint.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/ForwardPoint.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/ForwardSpot.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/ForwardSpot.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/PhongShader.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/engine/rendering/SpotLight.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/Coffee/com/base/game/TestGame.class" afterPath="$PROJECT_DIR$/out/production/Coffee/com/base/game/TestGame.class" />
+      <change beforePath="$PROJECT_DIR$/src/com/base/engine/components/BaseLight.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/BaseLight.java" />
       <change beforePath="$PROJECT_DIR$/src/com/base/engine/components/Component.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/Component.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/components/DirectionalLight.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/DirectionalLight.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/base/engine/components/MeshRenderer.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/MeshRenderer.java" />
       <change beforePath="$PROJECT_DIR$/src/com/base/engine/components/PointLight.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/PointLight.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/core/CoreEngine.java" afterPath="$PROJECT_DIR$/src/com/base/engine/core/CoreEngine.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java" />
       <change beforePath="$PROJECT_DIR$/src/com/base/engine/core/GameObject.java" afterPath="$PROJECT_DIR$/src/com/base/engine/core/GameObject.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/core/RenderingEngine.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/rendering/Attenuation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/rendering/BaseLight.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/BaseLight.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardDirectional.java" afterPath="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardDirectional.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/base/engine/core/Transform.java" afterPath="$PROJECT_DIR$/src/com/base/engine/core/Transform.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/base/engine/core/Vector2f.java" afterPath="$PROJECT_DIR$/src/com/base/engine/core/Vector2f.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/base/engine/core/Vector3f.java" afterPath="$PROJECT_DIR$/src/com/base/engine/core/Vector3f.java" />
       <change beforePath="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardPoint.java" afterPath="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardPoint.java" />
       <change beforePath="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardSpot.java" afterPath="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardSpot.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/rendering/PhongShader.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/com/base/engine/rendering/SpotLight.java" afterPath="$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java" />
       <change beforePath="$PROJECT_DIR$/src/com/base/game/TestGame.java" afterPath="$PROJECT_DIR$/src/com/base/game/TestGame.java" />
     </list>
     <ignored path="Coffee.iws" />
@@ -53,85 +48,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="TestGame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/base/game/TestGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="889">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Component.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/Component.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseLight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/BaseLight.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#497#498#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
-                <element signature="e#931#932#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forward-spot.fs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/shaders/forward-spot.fs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-508">
-              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointLight.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PointLight.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/PointLight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="13" column="131" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="131" />
+            <state relative-caret-position="800">
+              <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
-                <element signature="e#1166#1167#0" expanded="true" />
-                <element signature="e#1213#1214#0" expanded="true" />
-                <element signature="e#1253#1254#0" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1314#1315#0" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
-                <element signature="e#1393#1394#0" expanded="true" />
-                <element signature="e#1427#1428#0" expanded="true" />
-                <element signature="e#1458#1459#0" expanded="true" />
-                <element signature="e#1505#1506#0" expanded="true" />
-                <element signature="e#1545#1546#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#946#947#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1107#1108#0" expanded="true" />
+                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#1182#1183#0" expanded="true" />
+                <element signature="e#1229#1230#0" expanded="true" />
+                <element signature="e#1276#1277#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpotLight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java">
+      <file leaf-file-name="Vector3f.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Vector3f.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="1064">
+              <caret line="119" column="3" lean-forward="true" selection-start-line="119" selection-start-column="3" selection-end-line="121" selection-end-column="5" />
+              <folding>
+                <element signature="e#3386#3387#0" expanded="true" />
+                <element signature="e#3436#3437#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector2f.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Vector2f.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1300">
+              <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+              <folding>
+                <element signature="e#1826#1827#0" expanded="true" />
+                <element signature="e#1863#1864#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForwardPoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/ForwardPoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1018">
+              <caret line="65" column="85" lean-forward="false" selection-start-line="65" selection-start-column="85" selection-end-line="65" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -140,18 +110,18 @@
       <file leaf-file-name="ForwardSpot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/ForwardSpot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1082">
-              <caret line="64" column="62" lean-forward="false" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+            <state relative-caret-position="843">
+              <caret line="68" column="85" lean-forward="false" selection-start-line="68" selection-start-column="85" selection-end-line="68" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForwardPoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/ForwardPoint.java">
+      <file leaf-file-name="MeshRenderer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/MeshRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1157">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="550">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,41 +130,39 @@
       <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="932">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="550">
+              <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RenderingEngine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/RenderingEngine.java">
+      <file leaf-file-name="SpotLight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="61" lean-forward="false" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2027#2028#0" expanded="true" />
-                <element signature="e#2062#2063#0" expanded="true" />
-                <element signature="e#2412#2413#0" expanded="true" />
-                <element signature="e#2445#2446#0" expanded="true" />
-                <element signature="e#2501#2502#0" expanded="true" />
-                <element signature="e#2577#2578#0" expanded="true" />
-                <element signature="e#2644#2645#0" expanded="true" />
-                <element signature="e#2687#2688#0" expanded="true" />
-                <element signature="e#2736#2737#0" expanded="true" />
-                <element signature="e#2779#2780#0" expanded="true" />
-                <element signature="e#2822#2823#0" expanded="true" />
-                <element signature="e#2869#2870#0" expanded="true" />
-                <element signature="e#2915#2916#0" expanded="true" />
-                <element signature="e#2961#2962#0" expanded="true" />
-                <element signature="e#2998#2999#0" expanded="true" />
-                <element signature="e#3031#3032#0" expanded="true" />
-                <element signature="e#3083#3084#0" expanded="true" />
-                <element signature="e#3127#3128#0" expanded="true" />
-                <element signature="e#3167#3168#0" expanded="true" />
-                <element signature="e#3201#3202#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/base/game/TestGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1232">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transform.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Transform.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -267,10 +235,7 @@
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/RenderUtil.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/BasicShader.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/core/Matrix4f.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/core/Transform.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/Window.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/core/Vector2f.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/core/Vector3f.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/core/Game.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/Camera.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/core/Component.java" />
@@ -284,23 +249,26 @@
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardAmbient.java" />
         <option value="$PROJECT_DIR$/res/shaders/forward-point.vs" />
         <option value="$PROJECT_DIR$/res/shaders/forward-directional.fs" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/components/MeshRenderer.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/components/Component.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/core/GameObject.java" />
         <option value="$PROJECT_DIR$/res/shaders/forward-point.fs" />
         <option value="$PROJECT_DIR$/res/shaders/forward-spot.fs" />
         <option value="$PROJECT_DIR$/res/shaders/phongFragment.fs" />
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/PhongShader.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/components/DirectionalLight.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/components/BaseLight.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardDirectional.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/core/RenderingEngine.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/components/PointLight.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardPoint.java" />
-        <option value="$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/RenderingEngine.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/components/BaseLight.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/components/Component.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/core/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardPoint.java" />
         <option value="$PROJECT_DIR$/src/com/base/engine/rendering/ForwardSpot.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/components/MeshRenderer.java" />
         <option value="$PROJECT_DIR$/src/com/base/game/TestGame.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/core/Transform.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/core/Vector3f.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/core/Vector2f.java" />
+        <option value="$PROJECT_DIR$/src/com/base/engine/components/PointLight.java" />
       </list>
     </option>
   </component>
@@ -334,6 +302,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -406,9 +377,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -778,7 +746,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17911255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19859308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -889,27 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Transform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Vector2f.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1525">
-          <caret line="94" column="46" lean-forward="false" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Vector3f.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="152" column="67" lean-forward="false" selection-start-line="152" selection-start-column="67" selection-end-line="152" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -1017,7 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,7 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1149">
           <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,14 +990,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/PhongShader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="20" column="98" lean-forward="true" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/PhongShader.java" />
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/ForwardDirectional.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1325">
@@ -1061,22 +999,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/Attenuation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/MeshRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/Attenuation.java" />
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/CoreEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="907">
@@ -1085,17 +1008,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="932">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/RenderingEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
+        <state relative-caret-position="1000">
           <caret line="50" column="61" lean-forward="false" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1127,95 +1042,143 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1414">
           <caret line="84" column="74" lean-forward="false" selection-start-line="84" selection-start-column="74" selection-end-line="84" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/shaders/forward-spot.fs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-508">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-          <folding />
+        <state relative-caret-position="800">
+          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/BaseLight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="250">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/PointLight.java">
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="131" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="131" />
+        <state relative-caret-position="450">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/SpotLight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/ForwardPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1157">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="67" selection-end-column="5" />
+        <state relative-caret-position="1018">
+          <caret line="65" column="85" lean-forward="false" selection-start-line="65" selection-start-column="85" selection-end-line="65" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/engine/rendering/ForwardSpot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1082">
-          <caret line="64" column="62" lean-forward="false" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+        <state relative-caret-position="843">
+          <caret line="68" column="85" lean-forward="false" selection-start-line="68" selection-start-column="85" selection-end-line="68" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/MeshRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Transform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/base/game/TestGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="1232">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Vector3f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="119" column="3" lean-forward="true" selection-start-line="119" selection-start-column="3" selection-end-line="121" selection-end-column="5" />
+          <folding>
+            <element signature="e#3386#3387#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/core/Vector2f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+          <folding>
+            <element signature="e#1826#1827#0" expanded="true" />
+            <element signature="e#1863#1864#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/base/engine/components/PointLight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1276#1277#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
