@@ -14,7 +14,7 @@ public class Transform {
 
     public Matrix4f getTransformation(){
         Matrix4f translationMat = new Matrix4f().Translation(position.getX(), position.getY(), position.getZ());
-        Matrix4f rotationMat = rotation.toRotationMatrix();//new Matrix4f().Rotation(rotation.getX(), rotation.getY(), rotation.getZ());
+        Matrix4f rotationMat = rotation.toRotationMatrix();
         Matrix4f scaleMat = new Matrix4f().Scale(scale.getX(), scale.getY(), scale.getZ());
 
         return translationMat.mul(rotationMat.mul(scaleMat));

@@ -34,7 +34,6 @@ public class Vector3f {
     }
 
     public Vector3f rotate(float angle, Vector3f axis){
-
         float sinAngle = (float)Math.sin(-angle);
         float cosAngle = (float)Math.cos(-angle);
 

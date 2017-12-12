@@ -7,11 +7,27 @@ public class Quaternion {
     private float z;
     private float w;
 
+    public Quaternion(){
+        this(0,0,0,1);
+    }
+
     public Quaternion(float x, float y, float z, float w){
         this.x = x;
         this.y = y;
         this.z = z;
         this.w = w;
+    }
+
+    public Quaternion initRotation(Vector3f axis, float angle){
+        float sinHalfAngle = (float)Math.sin(angle / 2);
+        float cosHalfAngle = (float)Math.cos(angle / 2);
+
+        this.x = axis.getX() * sinHalfAngle;
+        this.y = axis.getY() * sinHalfAngle;
+        this.z = axis.getZ() * sinHalfAngle;
+        this.w = cosHalfAngle;
+
+        return this;
     }
 
     public float length(){
@@ -51,7 +67,7 @@ public class Quaternion {
         Vector3f up = new Vector3f(2.0f * (x * y + w * z), 1.0f - 2.0f * (x * x + z * z), 2.0f * (y * z - w * x));
         Vector3f right = new Vector3f(1.0f - 2.0f * (y * y + z * z), 2.0f * (x * y - w * z), 2.0f * (x * z + w * y));
 
-        return new Matrix4f().InitRotation(forward, up, right);
+        return new Matrix4f().initRotation(forward, up, right);
     }
 
 

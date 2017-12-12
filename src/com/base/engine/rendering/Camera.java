@@ -23,15 +23,15 @@ public class Camera {
     }
 
     public Matrix4f getViewProjection(){
-        Matrix4f camRotation = new Matrix4f().InitRotation(forward, up);
+        Matrix4f camRotation = new Matrix4f().initRotation(forward, up);
         Matrix4f cameraTranslation = new Matrix4f().Translation(-position.getX(), -position.getY(), -position.getZ());
 
         return projection.mul(camRotation.mul(cameraTranslation));
     }
 
     public void input(float delta){
-        float movAmount = (float)(10 * delta);
-        float rotAmount = (float)(2 * delta);
+        float movAmount = (10f * delta);
+        float rotAmount = (2f * delta);
 
         if(Input.getKey(GLFW_KEY_W)){
             move(forward, movAmount);
